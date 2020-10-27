@@ -14,11 +14,10 @@ class BetterDF(pd.DataFrame):
 
     def train_test_split(self, test_size=.2, random_state=None):
         """Return a train/test split of a dataframe"""
-        
         df_size = len(self)
         testing_size = max(1, int(df_size*test_size))
-        
-        self.test = BetterDF(self.sample(testing_size, random_state=random_state))
+        samp = self.sample(testing_size, random_state=random_state)
+        self.test = BetterDF(samp)
         self.train = BetterDF(self.drop(self.test.index))
 
         return self.train, self.test
@@ -32,10 +31,11 @@ class BetterDF(pd.DataFrame):
 
 if __name__ == "__main__":
     df = BetterDF({
-        'A':range(20),
-        'B':range(20, 40)
+        'A': range(20),
+        'B': range(20, 40)
     })
 
     df.train_test_split()
     df.shuffle()
     print(df.numna())
+
