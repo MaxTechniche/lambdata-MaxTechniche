@@ -9,7 +9,7 @@ REQUIRED = [
 ]
 
 setuptools.setup(
-    name="dfunc-MaxTechniche",
+    name="dfunc",
     version="0.0.2",
     author="MaxTechniche",
     author_email="max.techniche@gmail.com",
