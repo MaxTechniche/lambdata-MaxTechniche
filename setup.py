@@ -10,7 +10,7 @@ REQUIRED = [
 
 setuptools.setup(
     name="dfunc",
-    version="0.0.2",
+    version="0.0.3",
     author="MaxTechniche",
     author_email="max.techniche@gmail.com",
     description="Multiuse functions to clean pandas DataFrames",
