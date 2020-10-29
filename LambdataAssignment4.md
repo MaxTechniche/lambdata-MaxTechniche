@@ -5,3 +5,5 @@
 ## [README.md](https://github.com/MaxTechniche/lambdata-MaxTechniche/blob/main/README.md)
 
 ## [Licence](https://github.com/MaxTechniche/lambdata-MaxTechniche/blob/main/LICENSE)
+
+## [Docs](https://maxtechniche.github.io/lambdata-MaxTechniche/)
