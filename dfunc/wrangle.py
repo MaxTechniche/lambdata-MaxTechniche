@@ -24,7 +24,7 @@ class BetterDF(pd.DataFrame):
         """Returns a shuffled version of the dataframe."""
         df = BetterDF(self.sample(frac=1, random_state=random_state))
         if inplace:
-            self = df
+            self[self.columns] = df[df.columns].reset_index().drop(columns='index')
         return df
 
 if __name__ == "__main__":
@@ -34,5 +34,7 @@ if __name__ == "__main__":
     })
 
     df.train_test_split()
-    df.shuffle()
+    print(df)
+    df.shuffle(inplace=True)
+    print(df)
     print(df.numna())
